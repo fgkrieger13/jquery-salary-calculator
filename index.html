@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script  src = "jquery.js"></script>
+    <script src = "client.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+    <title>Salary Calculator</title>
+</head>
+
+<body>
+    <h1>Salary Calculator</h1>
+    <h2>Add Employee</h2>
+    <h3>
+       <input placeholder = "First Name" id="firstName"/>
+       <input placeholder = "Last Name" id="lastName"/>
+       <input placeholder = "ID" id="identity"/>
+       <input placeholder = "Title" id="title"/>
+       <input placeholder = "Annual Salary" id="annualSalary"/>
+    </h3>
+    <h4><button id = "submitButton">Submit</button></h4>
+    <table class = 'center'>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                    <th></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                            <td>Cool</td>
+                            <td>Guy</td>
+                            <td>0000</td>
+                            <td>Boss Man</td>
+                            <td>A Lot</td>
+                            <td class = 'delete'><button>Delete</button></td>
+                    </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    <h2 id = 'salaryCount'>Total Monthly: 0</h2>
+
+    
+</body>
+</html>
