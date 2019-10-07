@@ -5,7 +5,7 @@ $(document).ready(readyNow);
 function readyNow(){
     console.log('JQ');
     $('#submitButton').on('click', salaryFunction);
-    $('table').on('click', '.delete', deleteFunction);
+    $('tbody').on('click', '.delete', deleteFunction);
 }
 let monthlySalary = 0;
 var employees = [];
@@ -26,7 +26,7 @@ function salaryFunction(){
     employees.push(employeeInfo);
     console.log(employees)
 
-    $('table').append(`
+    $('tbody').append(`
     <tr>
             <td>`+ (nameFirst) +`</td>
             <td>`+ (nameLast) +`</td>
@@ -53,7 +53,11 @@ function deleteFunction(){
     console.log('delete');
     $(this).closest('tr').remove();
     
-    //let name = this.closest('tr');
+    
+     employees.forEach(function (employee){
+        employees.splice(employee, 1);
+     })
+     
     // let salary = this.closest('tr').index[5]
     // console.log(salary)
 
@@ -66,7 +70,7 @@ function deleteFunction(){
 
     //console.log(employee)
 
-    // employees.splice(name, 1);
+    //employees.splice(name, 1);
 
     // monthlySalary = monthlySalary - (employee/12);
     // $('#salaryCount').text(Number(monthlySalary));
