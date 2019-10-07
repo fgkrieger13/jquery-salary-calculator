@@ -53,7 +53,7 @@ function deleteFunction(){
     console.log('delete');
     $(this).closest('tr').remove();
     
-    let name = this.closest('tr');
+    //let name = this.closest('tr');
     // let salary = this.closest('tr').index[5]
     // console.log(salary)
 
@@ -64,7 +64,7 @@ function deleteFunction(){
     //     }
     // }
 
-    console.log(employee)
+    //console.log(employee)
 
     // employees.splice(name, 1);
 
