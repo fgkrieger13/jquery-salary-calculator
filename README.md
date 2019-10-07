@@ -32,7 +32,7 @@
 - create a delete function
     - make sure the function name matches the function name in the delete button listner
     - use (this).closest to remove the row you click on from the table
-
+- style with css
 
 - Thanks to prime academy for helping me start this project
 - if you have any issues feel free to email me at fgkrieger13@gmail.com
