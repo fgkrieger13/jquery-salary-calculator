@@ -59,11 +59,13 @@ function deleteFunction(){
     let salary = $(this).siblings('.salary').text();
     console.log(salary)
 
-    for (let j = 0; j < employees.length; j++) {
-        if(employees[j].name === name){
-        employees.splice(name, j)
+    let updateEmployees = []
+    employees.forEach(function(employee){
+        if (employee.empFirst !== name){
+            updateEmployees.push(employee)
         }
-    }
+    });
+    employees = updateEmployees;
     
     monthlySalary = monthlySalary - (salary/12);
     $('#salaryCount').text(Number(monthlySalary));
