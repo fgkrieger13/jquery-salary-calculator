@@ -41,7 +41,10 @@ function salaryFunction(){
      $('#title').val('');
      $('#annSalary').val('');
          
-     
+     monthlySalary = (annSalary/12) + monthlySalary;
+
+     $('#salaryCount').text(Number(monthlySalary));
+
 }
 
 
@@ -50,8 +53,22 @@ function deleteFunction(){
     console.log('delete');
     $(this).closest('tr').remove();
     
-    for (let index = 0; index < employees.length; index++) {
-        console.log(employees[index])
-       
-   }
+    let name = this.closest('tr');
+    // let salary = this.closest('tr').index[5]
+    // console.log(salary)
+
+    // for (var j = 0; j < employees.length; j++){
+    //     if (employees[j].empSalary === ){
+    //     let employee = '';
+    //     console.log(employee); 
+    //     }
+    // }
+
+    console.log(employee)
+
+    // employees.splice(name, 1);
+
+    // monthlySalary = monthlySalary - (employee/12);
+    // $('#salaryCount').text(Number(monthlySalary));
+   
 }
