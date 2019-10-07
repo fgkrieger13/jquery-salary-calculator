@@ -28,11 +28,11 @@ function salaryFunction(){
 
     $('tbody').append(`
     <tr>
-            <td>`+ (nameFirst) +`</td>
+            <td class = 'empFirst'>`+ (nameFirst) +`</td>
             <td>`+ (nameLast) +`</td>
             <td>`+ (idNum) +`</td>
             <td>`+ (title) +`</td>
-            <td>`+ (annSalary) +`</td>
+            <td class = 'salary'>`+ (annSalary) +`</td>
             <td class = 'delete'><button>Delete</button></td>
      </tr>`)
      $('#firstName').val('');
@@ -53,26 +53,19 @@ function deleteFunction(){
     console.log('delete');
     $(this).closest('tr').remove();
     
+    let name = $(this).siblings('.empFirst').text();
+     console.log(name)
+
+    let salary = $(this).siblings('.salary').text();
+    console.log(salary)
+
+    for (let j = 0; j < employees.length; j++) {
+        if(employees[j].name === name){
+        employees.splice(name, j)
+        }
+    }
     
-     employees.forEach(function (employee){
-        employees.splice(employee, 1);
-     })
-     
-    // let salary = this.closest('tr').index[5]
-    // console.log(salary)
-
-    // for (var j = 0; j < employees.length; j++){
-    //     if (employees[j].empSalary === ){
-    //     let employee = '';
-    //     console.log(employee); 
-    //     }
-    // }
-
-    //console.log(employee)
-
-    //employees.splice(name, 1);
-
-    // monthlySalary = monthlySalary - (employee/12);
-    // $('#salaryCount').text(Number(monthlySalary));
+    monthlySalary = monthlySalary - (salary/12);
+    $('#salaryCount').text(Number(monthlySalary));
    
 }
